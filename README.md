@@ -1,7 +1,3 @@
-Set-Content -Path "README.md" -Encoding utf8 -Value '# GeoRank Engine
-
-An asynchronous geospatial retrieval and ranking engine designed for real-time pickup point recommendations. 
-
 ## Architecture Overview
 1. **Data & Geospatial Processing:** Raw coordinates are mapped to discrete spatial cells using **Uber H3 Indexing (Resolution 8)**. Feature engineering includes Haversine distances, historical waiting times, and location popularity metrics.
 2. **Model Pipeline:** A PyTorch neural network is trained for pointwise ranking, outputting selection probabilities. The preprocessing pipelines (scalers) and model weights are serialized for production use.
